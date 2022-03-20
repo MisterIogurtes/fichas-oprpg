@@ -21,6 +21,17 @@
       <img src="image/medo.png" height="50%" width="50%" class="center">
       <p id="demo" class="countdown"></p>
             
+      <div class='label-float'>
+            <input type='password' id='senha' paceholder='' required>
+            <label id='senhaLabel' for='senha' id='senha'>Senha</label>
+      </div>
+        
+      <div class='justify-center'></div>
+
+      <div class='justify-center'>
+        <button class="start" onclick="entrar()">?</button>
+      </div>
+            
         </div>
     </body>
     
@@ -39,6 +50,7 @@
     </style>    
     
 <script>
+        //COUNTDOWN
 var countDownDate = new Date("Apr 23, 2022 17:00:00").getTime();
 
 var x = setInterval(function() {
@@ -59,5 +71,15 @@ var x = setInterval(function() {
     document.getElementById("demo").innerHTML = "EXPIRED";
   }
 }, 1000);
+    
+    
+        //SENHA
+function entrar(){
+    var senha = document.getElementById("senha");
+
+    if(senha.value == "ser sincero e incondicional"){
+      window.location.href = "qrcode/20M.html"
+    }
+  }
 </script>
 </html>
