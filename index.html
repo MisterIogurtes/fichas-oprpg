@@ -17,16 +17,19 @@
     <title>?</title>
     
     <body>
-      
-      <div>
-      <div class='container'>
-      <div class='card'>
-          <p id="demo"></p>
         
-      <div class="justify-center">
-          <button class="start" onclick="entrar()">?</button>
-          
-        </div>
+     <div class='label-float'>
+          <input type='password' id='senha' paceholder='' required>
+          <label id='senhaLabel' for='senha' id='senha'>+</label>
+     </div>
+        
+     <div class='justify-center'>
+     </div>
+
+     <div class='justify-center'>
+         <button class="start" onclick="entrar()">?</button>
+     </div>
+        
     </body>
     
     <style>
@@ -72,8 +75,13 @@
 }, 1000);
     
         // SENHA
+
 function entrar(){
-      window.location.href = "https://youtu.be/gXBxVjq2a0c"
+    var senha = document.getElementById("senha");
+
+    if(senha.value == "didsedw"){
+      window.location.href = "agostinhodasilva.html"
     }
+  }
 </script>
 </html>
