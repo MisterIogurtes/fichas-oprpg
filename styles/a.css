@@ -3,127 +3,135 @@
 }
 
 body {
-    background-color: black;
+    background-color: white;
     font-family: 'Space Mono', monospace;
 }
-
-div {
-    background-color:black;
-    position: absolute;
-    margin: auto;
-    padding: 40px;
-    border: 2px solid goldenrod;
-    text-align: center;
-    color: white;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    border-radius: 10%;
-}
-
-input {
-    width: 100%;
-    border: none;
-    outline: none;
-    border-radius: 10px;
-    padding: 15px;
-    font-size: 12pt;
-    box-shadow: 0px 10px 40px #00000056;
-}
-
-button {
-    background-color: black; 
-    border: 2px solid white;
-    color: white;
-    padding: 10px 28px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-family: 'Special Elite', cursive;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-
-.button:hover { 
-    background-color: white;
-    color: black;
-}
-
-img {
-    filter: drop-shadow(8px 8px 10px gray);
-}
-
-.imgSocial {
-    margin: 25px;
-    width: 60px;
-    height: 60px;
-    filter: drop-shadow(4px 4px 10px gray);
-}
-
-.socials {
-    width: 65%;
-    margin: auto;
-    text-align: center;
-    color: white;
-}
-
-a {
-    color: goldenrod;
-}
-
-h2 {
-    color: goldenrod;
-    font-family: 'Special Elite', cursive;
-}
-
-h3 {
-    color: goldenrod;
-    margin-bottom: 5px;
-    margin-top: 100px;
-    font-family: 'Special Elite', cursive;
-    text-align: center;
-}
-
-p {
-    text-align:center;  
-    text-justify:inter-word;
-    margin: 5px;
-}
-
-img {
-    filter: drop-shadow(8px 8px 10px gray);
-}
-
-.imgSocial {
-    margin: 25px;
-    width: 60px;
-    height: 60px;
-    filter: drop-shadow(4px 4px 10px gray);
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 .container {
-    width: 65%;
-    margin: auto;
-    padding: 20px;
-    border: 2px solid goldenrod;
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.card {
+  background-color: black;
+  padding: 30px;
+  border-radius: 4%;
+  box-shadow: 3px 3px 1px 0px #00000060;
+  border: 2px solid goldenrod;
+}
+
+h1{
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+}
+
+input{
     color: white;
+  }
+
+.label-float input{
+  width: 100%;
+  padding: 5px 5px;
+  display: inline-block;
+  border: 0;
+  border-bottom: 2px solid white;
+  background-color: transparent;
+  outline: none;
+  min-width: 180px;
+  font-size: 16px;
+  transition: all .3s ease-out;
+  border-radius: 0;
+  
 }
 
-.socials {
-    width: 65%;
-    margin: auto;
-    text-align: center;
-    color: white;
+.label-float{
+  position: relative;
+  padding-top: 13px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  color: white;
 }
 
-.simbolosHome {
-    margin: 20px;
-    max-width: 100%;
-    height: auto;
+.label-float input:focus{
+  border-bottom: 2px solid white;
 }
 
+.label-float label{
+  color: white;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 13px;
+  transition: all .3s ease-out;
+}
+
+.label-float input:focus + label,
+.label-float input:valid + label{
+  font-size: 13px;
+  margin-top: 0;
+  color: white;
+}
+
+button{
+  background-color: transparent;
+  border-color: white;
+  color: white;
+  padding: 7px;
+  font-weight: bold;
+  font-size: 12pt;
+  margin-top: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  transition: all .4s ease-out;
+}
+
+button:hover{
+  background-color: white;
+  color: #fff;
+}
+
+.justify-center{
+  display: flex;
+  justify-content: center;
+}
+
+hr{
+  margin-top: 10%;
+  margin-bottom: 10%;
+  width: 60%;
+}
+
+p{
+  color: white;
+  font-size: 14pt;
+  text-align: center;
+}
+
+a{
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all .3s ease-out;
+}
+
+a:hover{
+  color: white;
+}
+
+ #msgError{
+  text-align: center;
+  color: #ff0000;
+  background-color: #ffbbbb;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
+}
 .start {
     background-color: black; 
     border: 2px solid white;
@@ -142,3 +150,5 @@ img {
     background-color: white;
     color: black;
 }
+
+
