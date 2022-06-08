@@ -1,20 +1,37 @@
 const data = {
-  name: 'Mah',
+  name: 'Maya Lopez (Mah)',
   player: 'beatrizz',
   class: 'Ocultista',
   rank: 'Elite',
-  nex: '?%',
-  occupation: 'Sem Ocupação',
+  nex: '45%',
+  occupation: '',
   age: 26,
   sex: 'female',
-  birthplace: '?',
+  birthplace: 'Bilbao, Espanha',
   residence: 'São Paulo, Brasil',
 
   life: {
+    current: 50,
+    max: 51,
+  },
+  sanity: {
+    current: 44,
+    max: 44,
+  },
+  ocult: {
+    current: 11,
+    max: 11,
+  },
+
+  pass: {
     current: 99,
     max: 99,
   },
-  sanity: {
+  bloq: {
+    current: 99,
+    max: 99,
+  },
+  esqu: {
     current: 99,
     max: 99,
   },
@@ -24,24 +41,57 @@ const data = {
       name: 'Katana',
       type: 'Especial (duas mãos)',
       damage: '+5',
-      numCurrent: 1,
-      numMax: 1,
-      attack: 5,
-      reach: '15 m',
-      defect: 1,
-      area: 'd',
+      numCurrent: 'Adjacente',
+      numMax: '1d10+4',
+      attack: '20/+1d',
+      reach: '',
+      defect: '',
+      area: '',
+    },
+  ],
+  items: [
+    {
+      name: 'Katana',
+      type: 'Especial (duas mãos)',
+      damage: '+5',
+      numCurrent: 'Adjacente',
+      numMax: '1d10+4',
+      attack: '20/+1d',
+      reach: '',
+      defect: '',
+      area: '',
     },
   ],
   attributes: [
     {
-      type: '',
-      amount: 20,
+      type: 'AGI.',
+      amount: +2,
+    },
+    {
+      type: 'INT.',
+      amount: +1,
+    },
+    {
+      type: 'VIG.',
+      amount: +1,
+    },
+    {
+      type: 'PRE.',
+      amount: +2,
+    },
+    {
+      type: 'FOR.',
+      amount: +1,
     },
   ]
 }
 
 data.weapons.map((weapon, index) => {
   addWeaponToTable(weapon, index)
+})
+
+data.items.map((item, index) => {
+  addWeaponToTable(item, index)
 })
 
 data.attributes.map((attribute, index) => {
@@ -72,9 +122,33 @@ $('#sanityCount').text(`${data.sanity.current}/${data.sanity.max}`)
 $('#sanityCurrent').val(data.sanity.current)
 $('#sanityMax').val(data.sanity.max)
 
-const diceModal = $('#diceAttributes')
+$('.ocultBar').css('width', `${calculateBar(data.ocult.current, data.ocult.max)}%`)
+$('#ocultCount').text(`${data.ocult.current}/${data.ocult.max}`)
+$('#ocultCurrent').val(data.ocult.current)
+$('#ocultMax').val(data.ocult.max)
+
+$('.passBar').css('width', `${calculateBar(data.pass.current, data.pass.max)}%`)
+$('#passCount').text(`${data.pass.current}/${data.pass.max}`)
+$('#passCurrent').val(data.pass.current)
+$('#passMax').val(data.pass.max)
+
+$('.bloqBar').css('width', `${calculateBar(data.bloq.current, data.bloq.max)}%`)
+$('#bloqCount').text(`${data.bloq.current}/${data.bloq.max}`)
+$('#bloqCurrent').val(data.bloq.current)
+$('#bloqMax').val(data.bloq.max)
+
+$('.esquBar').css('width', `${calculateBar(data.esqu.current, data.esqu.max)}%`)
+$('#esquCount').text(`${data.esqu.current}/${data.esqu.max}`)
+$('#esquCurrent').val(data.esqu.current)
+$('#esquMax').val(data.esqu.max)
+
 const lifeModal = $('#lifeModal')
 const sanityModal = $('#sanityModal')
+const ocultModal = $('#ocultModal')
+
+const passModal = $('#passModal')
+const bloqModal = $('#bloqModal')
+const esquModal = $('#esquModal')
 
 $(window).click(function (event) {
   if (event.target.id == 'diceAttributes') {
@@ -88,10 +162,16 @@ $(window).click(function (event) {
     lifeModal.css('display', 'none')
   } else if (event.target.id == 'sanityModal') {
     sanityModal.css('display', 'none')
+  } else if (event.target.id == 'ocultModal') {
+  } else if (event.target.id == 'passModal') {
+    passModal.css('display', 'none')
+  } else if (event.target.id == 'bloqModal') {
+    bloqModal.css('display', 'none')
+  } else if (event.target.id == 'esquModal') {
+    esquModal.css('display', 'none')
   } else if (event.target.id == 'addWeaponModal') {
     closeModal('#addWeaponModal')
-  }
-})
+}})
 
 function rollAtribute(atribute, amount) {
   console.log(this)
@@ -157,6 +237,26 @@ $('.sanityBar').click(function () {
   sanityModal.css('display', 'block')
 })
 
+$('.ocultBar').click(function () {
+  console.log(this)
+  ocultModal.css('display', 'block')
+})
+
+$('.passBar').click(function () {
+  console.log(this)
+  passModal.css('display', 'block')
+})
+
+$('.bloqBar').click(function () {
+  console.log(this)
+  bloqModal.css('display', 'block')
+})
+
+$('.esquBar').click(function () {
+  console.log(this)
+  esquModal.css('display', 'block')
+})
+
 $('#addWeapon').click(function () {
   openModal('#addWeaponModal')
 })
@@ -201,6 +301,14 @@ $('#crazed').change(function () {
   }
 })
 
+$('#insane').change(function () {
+  if (this.checked) {
+    console.log('Modo insano ativado!')
+  } else {
+    console.log('Modo insano desativado!')
+  }
+})
+
 $('#addWeaponForm').submit(function (event) {
   var weaponType = ''
 
@@ -229,6 +337,38 @@ $('#addWeaponForm').submit(function (event) {
   addWeaponToTable(weapon, id)
 
   closeModal('#addWeaponModal')
+  event.preventDefault()
+})
+
+
+$('#addItemForm').submit(function (event) {
+  var itemType = ''
+
+  if ($('#itemType').val() == 'fire') {
+    itemType = 'Fogo'
+  } else if ($('#itemType').val() == 'arch') {
+    itemType = 'Arco'
+  } else if ($('#itemType').val() == 'fight') {
+    itemType = 'Briga'
+  }
+
+  const item = {
+    name: $('#itemName').val(),
+    type: itemType,
+    damage: $('#itemdamage').val(),
+    numCurrent: $('#itemNumCurrent').val(),
+    numMax: $('#itemNumMax').val(),
+    attack: $('#itemAttack').val(),
+    reach: $('#itemReach').val(),
+    defect: $('#itemDefect').val(),
+    area: $('#itemArea').val(),
+  }
+
+  data.item.push(item)
+  const id = data.item.length - 1
+  addWeaponToTable(item, id)
+
+  closeModal('#addItemModal')
   event.preventDefault()
 })
 
@@ -267,6 +407,76 @@ $('#changeSanity').submit(function (event) {
   closeModal('#sanityModal')
   event.preventDefault()
 })
+
+$('#changeOcult').submit(function (event) {
+  let current = Number($('#ocultCurrent').val())
+  const max = Number($('#ocultMax').val())
+
+  if (current > max) {
+    alert('Os pontos de esforço atuais não podem ser maiores que os maximos!')
+    current = max
+  }
+data.ocult.current = current
+data.ocult.max = max
+$('.ocultBar').css('width', `${calculateBar(current, max)}%`)
+$('#ocultCount').text(`${current}/${max}`)
+
+closeModal('#ocultModal')
+event.preventDefault()
+})
+
+$('#changePass').submit(function (event) {
+  let current = Number($('#passCurrent').val())
+  const max = Number($('#passMax').val())
+
+  if (current > max) {
+    alert('O nível de passiva atual não pode ser maior que o maximo!')
+    current = max
+  }
+data.pass.current = current
+data.pass.max = max
+$('.passBar').css('width', `${calculateBar(current, max)}%`)
+$('#passCount').text(`${current}/${max}`)
+
+closeModal('#passModal')
+event.preventDefault()
+})
+
+$('#changeBloq').submit(function (event) {
+  let current = Number($('#bloqCurrent').val())
+  const max = Number($('#bloqMax').val())
+
+  if (current > max) {
+    alert('O nível de bloqueio atual não pode ser maior que o maximo!')
+    current = max
+  }
+data.bloq.current = current
+data.bloq.max = max
+$('.bloqBar').css('width', `${calculateBar(current, max)}%`)
+$('#bloqCount').text(`${current}/${max}`)
+
+closeModal('#esquModal')
+event.preventDefault()
+})
+
+$('#changeEsqu').submit(function (event) {
+  let current = Number($('#esquCurrent').val())
+  const max = Number($('#esquMax').val())
+
+  if (current > max) {
+    alert('O nível de esquiva atual não pode ser maior que o maximo!')
+    current = max
+  }
+data.esqu.current = current
+data.esqu.max = max
+$('.esquBar').css('width', `${calculateBar(current, max)}%`)
+$('#esquCount').text(`${current}/${max}`)
+
+closeModal('#esquModal')
+event.preventDefault()
+})
+
+
 
 function calculateBar(current, max) {
   if (current > max) {
@@ -356,9 +566,7 @@ function closeModal(modal) {
 function addWeaponToTable(weapon, id) {
   const newWeapon = $(`<tr id="weapon_${id}">
         <td>
-            <button onclick="deleteWeapon(${id})">
-                <i class="fa fa-trash-o trashcan"></i>
-            </button>
+
             ${weapon.name}
         </td>
         <td>${weapon.type}</td>
@@ -386,4 +594,12 @@ function addAttribute(attribute, id) {
 
 function deleteWeapon(id) {
   $(`tr#${id}`).remove()
+}
+
+
+function antecedentes(){
+  window.location.href = "antecedentes.html"
+}
+function infoadd(){
+  window.location.href = "infoadd.html"
 }

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap');
 
 * {
     margin: 0;
@@ -52,12 +53,45 @@ h2.grid-title {
         'details details details character'
         'attributes attributes attributes expertise'
         'combat combat combat combat'
+        'inv inv inv inv'
         'expertise2 expertise2 expertise2 expertise2';
     grid-gap: 30px;
 
     margin-left: auto;
     margin-right: auto;
     width: 70%;
+}
+
+.start {
+    background-color: black; 
+    border: 2px solid white;
+    color: white;
+    padding: 10px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Special Elite', cursive;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.start:hover {
+    background-color: white;
+    color: black;
+}
+
+.con {
+    align-self: center;
+    width: 25px;
+    height: 25px;
+    color: #fff;
+    font-size: 22px;
+    background: #0a0b0c;
+    border: 0.1px solid #a2a2a2;
+    margin-right: 50px;
+    justify-content: center;
+    text-align: center;
 }
 
 .border {
@@ -138,6 +172,32 @@ h2.grid-title {
     margin-right: 50px;
 }
 
+
+.inv {
+    grid-area: inv;
+    height: 400px;
+}
+.inv .grid-title {
+    flex: 1;
+}
+
+.inv .invHeader {
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+}
+
+.inv .invHeader button {
+    align-self: center;
+    width: 25px;
+    height: 25px;
+    color: #fff;
+    font-size: 22px;
+    background: #0a0b0c;
+    border: 0.1px solid #a2a2a2;
+    margin-right: 50px;
+}
+
 table.weapons {
     display: block;
     margin: 0;
@@ -183,6 +243,52 @@ table.weapons td button {
     background: #0a0b0c;
 }
 
+
+table.items {
+    display: block;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-block-end: auto;
+    border-collapse: collapse;
+    width: 90%;
+}
+
+table.items tr:first-child {
+    border-bottom: 2px solid #a2a2a2;
+}
+
+table.items tr {
+    border-bottom: 0.1px solid #a2a2a2;
+}
+
+table.items th {
+    text-align: center;
+    height: 25px;
+    width: 10%;
+}
+
+table.items td {
+    text-align: center;
+    height: 35px;
+}
+
+table.items td input {
+    text-align: center;
+    width: 65%;
+    border-bottom: 0.1px solid #a2a2a2;
+}
+
+table.items td select {
+    font-size: 16px;
+}
+
+
+table.items td button {
+    color: #fff;
+    background: #0a0b0c;
+}
+
 .trashcan {
     color:white;
     width: 15px;
@@ -199,7 +305,7 @@ table.weapons td button {
 
 input {
     border: none;
-    border-bottom: 2px solid#a2a2a2;
+    border-bottom: 2px solid;
 
     padding: 3px 4px;
     margin-bottom: 10px;
@@ -215,7 +321,7 @@ input:focus {
 
 select {
     border: none;
-    border-bottom: 2px solid#a2a2a2;
+    border-bottom: 2px solid;
 
     padding: 3px 4px;
     margin-bottom: 10px;
@@ -230,9 +336,12 @@ select:focus {
 }
 
 /* INICIO BARS */
-
 .bars {
     padding-top: 12px;
+}
+
+.bars2 {
+    padding-top: 1px;
 }
 
 .bar {
@@ -288,9 +397,53 @@ select:focus {
 }
 
 .sanityBar {
-    width: 50%;
+    /* width: 50%; */
     height: 25px;
-    background-color: #011b64;
+    background-color: #104182;
+    transition: width 2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.ocultBar {
+    /* width: 50%; */
+    height: 25px;
+    background-color: darkorchid;
+    transition: width 2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.passBar {
+    /* width: 50%; */
+    height: 25px;
+    background-color: darkslategray;
+    transition: width 2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.bloqBar {
+    /* width: 50%; */
+    height: 25px;
+    background-color: darkolivegreen;
+    transition: width 2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.esquBar {
+    /* width: 50%; */
+    height: 25px;
+    background-color: darkseagreen;
     transition: width 2s;
     display: flex;
     align-items: center;
@@ -370,6 +523,82 @@ select:focus {
 }
   
 .attribute input {
+    width: 50%;
+    text-align: center;
+    font-size: 18px;
+    align-self: center;
+}
+
+.pericia .periciaList {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.pericia .pericia {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 85px;
+}
+
+.pericia img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 35px;
+}
+
+.pericia a {
+    cursor: pointer;
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
+}
+
+.pericia a:hover {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+  
+.pericia input {
+    width: 50%;
+    text-align: center;
+    font-size: 18px;
+    align-self: center;
+}
+
+.inv .invList {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.inv .inv {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 85px;
+}
+
+.inv img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 35px;
+}
+
+.inv a {
+    cursor: pointer;
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
+}
+
+.inv a:hover {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+  
+.inv input {
     width: 50%;
     text-align: center;
     font-size: 18px;
@@ -498,4 +727,16 @@ input[type="checkbox"]:checked + label:after {
     border: solid rgb(255, 255, 255);
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
+}
+
+.justify-center{
+    display: flex;
+    justify-content: center;
+  }
+
+.info{
+    justify-content: center;
+    text-align: center;
+    font-size: 180%;
+    font-family: 'Comic Neue', sans-serif;
 }

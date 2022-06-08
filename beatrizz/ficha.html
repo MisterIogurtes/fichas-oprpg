@@ -15,6 +15,8 @@
   </head>
   <body>
     <h1 class="title">Perfil de investigador: Ordo Realitas</h1>
+    <p class="info">&#9888;&#65039;FICHA INCOMPLETA</p>
+    <p class="info">(fichas incompletas podem conter bugs e funcionalidades não atribuidas)</p>
 
     <!-- modal -->
     <div id="diceAttributes" class="modal">
@@ -27,7 +29,7 @@
 
     <div id="lifeModal" class="modal with-input">
       <div class="modal-content">
-        <h2>MODIFICAR VIDA</h2>
+        <h2>MODIFICAR PONTOS DE VIDA</h2>
         <hr />
         <form class="formModal" id="changeLife">
           <h3>Atual</h3>
@@ -41,7 +43,7 @@
 
     <div id="sanityModal" class="modal with-input">
       <div class="modal-content">
-        <h2>MODIFICAR SANIDADE</h2>
+        <h2>MODIFICAR PONTOS DE SANIDADE</h2>
         <hr />
         <form class="formModal" id="changeSanity">
           <h3>Atual</h3>
@@ -58,6 +60,62 @@
       </div>
     </div>
 
+    <div id="ocultModal" class="modal with-input">
+      <div class="modal-content">
+        <h2>MODIFICAR PONTOS DE ESFORÇO</h2>
+        <hr />
+        <form class="formModal" id="changeOcult">
+          <h3>Atual</h3>
+          <input type="number" name="current" id="ocultCurrent" min="0" />
+          <h3>Máximo</h3>
+          <input type="number" name="ocultMax" id="ocultMax" min="0" />
+          <input type="submit" value="Salvar" />
+        </form>
+      </div>
+    </div>
+
+    <div id="passModal" class="modal with-input">
+      <div class="modal-content">
+        <h2>MODIFICAR NÍVEL DE PASSIVA</h2>
+        <hr />
+        <form class="formModal" id="changePass">
+          <h3>Atual</h3>
+          <input type="number" name="current" id="passCurrent" min="0" />
+          <h3>Máximo</h3>
+          <input type="number" name="passMax" id="passMax" min="0" />
+          <input type="submit" value="Salvar" />
+        </form>
+      </div>
+    </div>
+
+    <div id="bloqModal" class="modal with-input">
+      <div class="modal-content">
+        <h2>MODIFICAR NÍVEL DE BLOQUEIO</h2>
+        <hr />
+        <form class="formModal" id="changeBloq">
+          <h3>Atual</h3>
+          <input type="number" name="current" id="bloqCurrent" min="0" />
+          <h3>Máximo</h3>
+          <input type="number" name="bloqMax" id="bloqMax" min="0" />
+          <input type="submit" value="Salvar" />
+        </form>
+      </div>
+    </div>
+
+    <div id="esquModal" class="modal with-input">
+      <div class="modal-content">
+        <h2>MODIFICAR NÍVEL DE ESQUIVA</h2>
+        <hr />
+        <form class="formModal" id="changeEsqu">
+          <h3>Atual</h3>
+          <input type="number" name="current" id="esquCurrent" min="0" />
+          <h3>Máximo</h3>
+          <input type="number" name="esquMax" id="esquMax" min="0" />
+          <input type="submit" value="Salvar" />
+        </form>
+      </div>
+    </div>
+
     <div id="addWeaponModal" class="modal with-input">
       <div class="modal-content">
         <h2>ADICIONAR ARMA</h2>
@@ -65,15 +123,14 @@
         <form id="addWeaponForm" action="">
           <table class="weapons" id="newWeapon">
             <tr>
-              <th>Nome</th>
+              <th>Arma</th>
               <th>Tipo</th>
-              <th>Dano</th>
-              <th>Num. Atual</th>
-              <th>Num. Máximo</th>
               <th>Ataque</th>
               <th>Alcance</th>
-              <th>Defeito</th>
-              <th>Área</th>
+              <th>Dano</th>
+              <th>Crítico</th>
+              <th>Recarga</th>
+              <th>Especial</th>
             </tr>
             <tr>
               <td>
@@ -108,9 +165,6 @@
               <td>
                 <input type="text" name="weaponDefect" id="weaponDefect" />
               </td>
-              <td>
-                <input type="text" name="weaponArea" id="weaponArea" />
-              </td>
             </tr>
           </table>
           <input type="submit" value="Salvar" />
@@ -129,20 +183,20 @@
           <h4>Jogador</h4>
           <input type="text" name="player" id="player" value="" />
           <h4>Classe</h4>
-          <input type="text" name="class" id="class" value="" />
-          <h4>Patente</h4>
-          <input type="text" name="rank" id="rank" value="" />
+          <input type="text" name="player" id="class" value="" />
+          <h4>Cargo</h4>
+          <input type="text" name="player" id="rank" value="" />
           <h4>NEX</h4>
-          <input type="text" name="nex" id="nex" value="" />
+          <input type="text" name="player" id="nex" value="" />
           <h4>Ocupação</h4>
           <input type="text" name="occupation" id="occupation" value="" />
           <h4>Idade</h4>
           <input type="text" name="age" id="age" value="" />
-          <h4>Sexo</h4>
+          <h4>Gênero</h4>
           <select id="sex" name="sex">
             <option value="male">Masculino</option>
             <option value="female">Feminino</option>
-            <option value="other">Outros</option>
+            <option value="other">Outro</option>
           </select>
           <h4>Local de nascimento</h4>
           <input type="text" name="birthplace" id="birthplace" value="" />
@@ -152,11 +206,11 @@
       </div>
       <div class="character">
         <div class="characterHeader">
-          
         </div>
 
         <div class="bars">
-          <h4>Vida</h4>
+          <h1>Saúde</h1>
+          <h4>PONTOS DE VIDA</h4>
           <div class="bar">
             <div class="lifeBar" style="width: 0%">
               <p class="barcount" id="lifeCount"></p>
@@ -172,8 +226,8 @@
               <label for="dying"> Morrendo</label>
             </form>
           </div>
-
-          <h4>Sanidade</h4>
+<br>
+          <h4>PONTOS DE SANIDADE</h4>
           <div class="sanity">
             <div class="contentSanityBar">
               <div class="sanityBar" style="width: 0%">
@@ -182,54 +236,106 @@
             </div>
           </div>
           <div class="checkboxs">
-            <input
-              type="checkbox"
-              id="traumatized"
-              name="traumatized"
-              value="traumatized"
-            />
-            <label for="traumatized"> Traumatizado</label>
+            <input type="checkbox" id="traumatized" name="traumatized" value="traumatized"/>
+            <label for="traumatized"> Perturbado</label>
             <input type="checkbox" id="crazed" name="crazed" value="crazed" />
             <label for="crazed"> Enlouquecido</label>
+            <input type="checkbox" id="insane" name="insane" value="insane" />
+            <label for="insane"> Insano</label>
           </div>
         </div>
-
-        <div class="extra">
-          <div class="damage">
-            <p></p>
-          </div>
-
-          <div class="exposure">
-            <p>Exposição paranormal</p>
-            <p>?</p>
-          </div>
-
-          <div class="body">
-            <p></p>
-          </div>
+        <br>
+        <h4>PONTOS DE ESFORÇO</h4>
+        <div class="ocult">
+          <div class="contentOcultBar">
+            <div class="ocultBar" style="width: 0%">
+              <p class="barcount" id="ocultCount"></p>
         </div>
-      </div>
+        </div>
+<br><br>
+        <h1>Defesa</h1>
+        <h4>PASSIVA</h4>
+        <div class="pass">
+          <div class="contentPassBar">
+            <div class="passBar" style="width: 0%">
+              <p class="barcount" id="passCount"></p>
+        </div>
+        </div>
+<br>
+        <h4>BLOQUEIO</h4>
+        <div class="bloq">
+          <div class="contentBloqBar">
+            <div class="bloqBar" style="width: 0%">
+              <p class="barcount" id="bloqCount"></p>
+        </div>
+        </div>
+<br>
+        <h4>ESQUIVA</h4>
+        <div class="esqu">
+          <div class="contentEsquBar">
+            <div class="esquBar" style="width: 0%">
+              <p class="barcount" id="esquCount"></p>
+        </div>
+        </div>
+
+  </div>   
+  </div>  
+  </div>
+  </div>
+</div>
+
+
+
+
       <div class="attributes border">
-        <h2 class="grid-title">DADOS</h2>
+        <h2 class="grid-title">ATRIBUTOS</h2>
         <hr />
 
         <div class="attributesList" id="attributesList"></div>
       </div>
 
+      <div class="pericia border">
+        <h2 class="grid-title">PERICIA</h2>
+        <hr />
+          <h3>Atletismo ?</h3>
+          <h3>Atualidades ?</h3>
+          <h3>Ciência ?</h3>
+          <h3>Diplomacia ?</h3>
+          <h3>Enganação ?</h3>
+          <h3>Fortitude ?</h3>
+          <h3>Furtividade ?</h3>
+          <h3>Intimidação ?</h3>
+          <h3>Intuição ?</h3>
+          <h3>Investigação ?</h3>
+          <h3>Luta ?</h3>
+          <h3>Medicina ?</h3>
+          <h3>Ocultismo ?</h3>
+          <h3>Percepção ?</h3>
+          <h3>Pilotagem ?</h3>
+          <h3>Pontaria ?</h3>
+          <h3>Prestidigitação ?</h3>
+          <h3>Profissão ?</h3>
+          <h3>Reflexos ?</h3>
+          <h3>Religião ?</h3>
+          <h3>Tática ?</h3>
+          <h3>Tecnologia ?</h3>
+          <h3>Vontade ?</h3>
+        <div class="periciaList" id="periciaList"></div>
+      </div>
 
       <div class="combat border">
         <div class="combatHeader">
           <h2 class="grid-title">COMBATE</h2>
+          <button id="addWeapon">&plus;</button>
         </div>
         <hr />
 
         <table class="weapons" id="weapons">
           <tr>
-            <th>Nome</th>
+            <th>Arma</th>
             <th>Tipo</th>
             <th>Ataque</th>
-            <th>Espaço</th>
-            <th>Num. Alcance</th>
+            <th>Alcance</th>
             <th>Dano</th>
             <th>Crítico</th>
             <th>Recarga</th>
@@ -237,18 +343,16 @@
           </tr>
         </table>
       </div>
+    </div>
+    </div>
 
-      <br>
-      <div class="container">
-        <div class="details border">
-          <h2 class="grid-title">Antecedentes</h2>
-          <hr />
-          </div>
-        </div>
-        <div class="character">
-          <div class="characterHeader">
-            
-          </div>
+
+    <div class="justify-center">
+      <button class="start" onclick="infoadd()">Adicionais</button>
+    </div>
+    <div class="justify-center">
+      <button class="start" onclick="antecedentes()">Antecedentes</button>
+    </div>
 
     <!-- <div class="modal-overlay active">
             <div class="modal">
