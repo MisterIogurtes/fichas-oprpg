@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Ordem Paranormal RPG">
+    <meta name="twitter:description" content="Tudo começa pelo Sangue.">
+    <meta name="twitter:image" content="https://giocerione.github.io/4elementos/images/elementos/Medo.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet"> 
+    <link rel="shortcut icon" href="images/elementos/Medo.webp" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">  
+    </head>
+    
+    <body>
+    
+    <div class='container'>
+    <div class='card'>
+        <h4>HABILIDADES</h4>
+        <p><strong>110% (Origem)</strong> -> Uma vez por cena, quando fizeres um teste de perícia usando Força ou Agilidade (exceto testes de ataque) podes usar 2 PE para receber +5 no teste.</p>
+        <br>
+        <p><strong>Ataque Poderoso (Classe)</strong> -> Você é capaz de desferir um taque poderoso. Quando realizar um ataque usando a perícia Luta ou Pontaria, podes gastar 2 PE para receber +5 no teste. Além disso, também podes trocar o bônus de +5 no teste de ataque para receber um dano adicional de dano (de acordo com o dado de dano da arma).</p>
+        <br><br>
+
+    </div>
+    </div>
+    </div>
+        <div class="justify-center">
+            <button class="start" onclick="voltar()">Voltar</button>
+        </div>
+
+      <script>
+  function voltar(){
+    window.location.href = "ficha.html"
+  }
+      </script>
+</body>
+</html>
+
+
+
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: 'Space Mono', monospace;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.card {
+  background-color: black;
+  padding: 30px;
+  border-radius: 0%;
+  box-shadow: 3px 3px 1px 0px #00000060;
+  border: 2px solid goldenrod;
+}
+
+h1{
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+}
+
+h3{
+  text-align: center;
+  margin-bottom: 15px;
+  color: white;
+}
+
+h4{
+  text-align: left;
+  margin-bottom: 20px;
+  color: white;
+}
+
+p{
+    text-align: left;
+    margin-bottom: 15px;
+    color: white;
+}
+
+input{
+    color: white;
+  }
+
+.label-float input{
+  width: 100%;
+  padding: 5px 5px;
+  display: inline-block;
+  border: 0;
+  border-bottom: 2px solid white;
+  background-color: transparent;
+  outline: none;
+  min-width: 180px;
+  font-size: 16px;
+  transition: all .3s ease-out;
+  border-radius: 0;
+  
+}
+
+.label-float{
+  position: relative;
+  padding-top: 13px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  color: white;
+}
+
+.label-float input:focus{
+  border-bottom: 2px solid white;
+}
+
+.label-float label{
+  color: white;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 13px;
+  transition: all .3s ease-out;
+}
+
+.label-float input:focus + label,
+.label-float input:valid + label{
+  font-size: 13px;
+  margin-top: 0;
+  color: white;
+}
+
+button{
+  background-color: transparent;
+  border-color: white;
+  color: white;
+  padding: 7px;
+  font-weight: bold;
+  font-size: 12pt;
+  margin-top: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  transition: all .4s ease-out;
+}
+
+button:hover{
+  background-color: white;
+  color: #fff;
+}
+
+.justify-center{
+  display: flex;
+  justify-content: center;
+}
+
+hr{
+  margin-top: 10%;
+  margin-bottom: 10%;
+  width: 60%;
+}
+
+a{
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all .3s ease-out;
+}
+
+a:hover{
+  color: white;
+}
+
+ #msgError{
+  text-align: center;
+  color: #ff0000;
+  background-color: #ffbbbb;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
+}
+.start {
+    background-color: black; 
+    border: 2px solid white;
+    color: white;
+    padding: 10px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Special Elite', cursive;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.start:hover {
+    background-color: white;
+    color: black;
+}
+</style>

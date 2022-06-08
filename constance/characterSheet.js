@@ -1,39 +1,39 @@
 const data = {
-  name: 'Agostinho da Silva',
-  player: 'JOÃO DO CAPOTO',
-  class: 'Combatente',
-  rank: 'Recruta',
-  nex: '5%',
-  occupation: 'Personal Trainer',
-  age: 26,
+  name: 'Ivy Hart',
+  player: 'luvconstance',
+  class: 'Ocultista',
+  rank: 'Elite',
+  nex: '44%',
+  occupation: 'Policial',
+  age: 24,
   sex: 'female',
-  birthplace: 'Bilbao, Espanha',
+  birthplace: 'Londres, Inglaterra',
   residence: 'São Paulo, Brasil',
 
   life: {
-    current: 22,
-    max: 22,
+    current: 50,
+    max: 50,
   },
   sanity: {
+    current: 38,
+    max: 38,
+  },
+  ocult: {
     current: 12,
     max: 12,
   },
-  ocult: {
-    current: 4,
-    max: 4,
-  },
 
   pass: {
-    current: 15,
-    max: 15,
+    current: 99,
+    max: 99,
   },
   bloq: {
-    current: 22,
-    max: 22,
+    current: 99,
+    max: 99,
   },
   esqu: {
-    current: 20,
-    max: 20,
+    current: 99,
+    max: 99,
   },
 
   weapons: [
@@ -48,50 +48,40 @@ const data = {
       defect: '',
       area: '',
     },
+  ],
+  items: [
     {
-      name: 'Faca de combate',
-      type: 'Comum (uma mão)',
+      name: 'Katana',
+      type: 'Especial (duas mãos)',
       damage: '+5',
-      numCurrent: 'Curto',
-      numMax: '1d6+2',
+      numCurrent: 'Adjacente',
+      numMax: '1d10+4',
       attack: '20/+1d',
       reach: '',
       defect: '',
       area: '',
     },
-    {
-      name: 'Cano curto .38',
-      type: 'Revólver (Calibre Pequeno)',
-      damage: '+5',
-      numCurrent: 'Curto',
-      numMax: '2d4',
-      attack: '20/+2d',
-      reach: '3 (Comp.)',
-      defect: 'Discreto',
-      area: '',
-    },
   ],
-
   attributes: [
     {
       type: 'AGI.',
-      amount: 0,
+      amount: +2,
     },
     {
       type: 'INT.',
-      amount: -1,
+      amount: +2,
     },
     {
       type: 'VIG.',
-      amount: 2,
+      amount: +0,
     },
     {
       type: 'PRE.',
-      amount: 1,
+      amount: +1,
     },
     {
       type: 'FOR.',
-      amount: 2,
+      amount: +2,
     },
   ]
 }

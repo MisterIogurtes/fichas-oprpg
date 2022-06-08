@@ -11,12 +11,10 @@
 
     <link rel="stylesheet" href="styles.css" />
 
-    <title>Agostinho da Silva</title>
+    <title>Mah</title>
   </head>
   <body>
     <h1 class="title">Perfil de investigador: Ordo Realitas</h1>
-    <p class="info">&#9888;&#65039;FICHA INCOMPLETA</p>
-    <p class="info">(fichas incompletas podem conter bugs e funcionalidades não atribuidas)</p>
 
     <!-- modal -->
     <div id="diceAttributes" class="modal">
@@ -297,54 +295,29 @@
       <div class="pericia border">
         <h2 class="grid-title">PERICIA</h2>
         <hr />
-        <ul class="ulcenter">
-          <li>Atletismo <br> +5 </li>
-          <br>
-          <li>Atualidades <br> 0 </li>
-          <br>
-          <li>Ciência <br> 0 </li>
-          <br>
-          <li>Diplomacia <br> 0 </li>
-          <br>
-          <li>Enganação <br> 0 </li>
-          <br>
-          <li>Fortitude <br> +5 </li>
-          <br>
-          <li>Furtividade <br> 0 </li>
-          <br>
-          <li>Intimidação <br> +5 </li>
-          <br>
-          <li>Intuição <br> 0 </li>
-          <br>
-          <li>Investigação <br> 0 </li>
-          <br>
-          <li>Luta <br> +5 </li>
-          <br>
-          <li>Medicina <br> 0 </li>
-          <br>
-          <li>Ocultismo <br> 0 </li>
-          <br>
-          <li>Percepção <br> 0 </li>
-          <br>
-          <li>Pilotagem <br> 0 </li>
-          <br>
-          <li>Pontaria <br> 0 </li>
-          <br>
-          <li>Prestidigitação <br> 0 </li>
-          <br>
-          <li>Profissão <br> 0 </li>
-          <br>
-          <li>Reflexos <br> +5 </li>
-          <br>
-          <li>Religião <br> 0 </li>
-          <br>
-          <li>Tática <br> 0 </li>
-          <br>
-          <li>Tecnologia <br> 0 </li>
-          <br>
-          <li>Vontade <br> 0 </li>
-        </ul>
-
+          <h3>Atletismo ?</h3>
+          <h3>Atualidades ?</h3>
+          <h3>Ciência ?</h3>
+          <h3>Diplomacia ?</h3>
+          <h3>Enganação ?</h3>
+          <h3>Fortitude ?</h3>
+          <h3>Furtividade ?</h3>
+          <h3>Intimidação ?</h3>
+          <h3>Intuição ?</h3>
+          <h3>Investigação ?</h3>
+          <h3>Luta ?</h3>
+          <h3>Medicina ?</h3>
+          <h3>Ocultismo ?</h3>
+          <h3>Percepção ?</h3>
+          <h3>Pilotagem ?</h3>
+          <h3>Pontaria ?</h3>
+          <h3>Prestidigitação ?</h3>
+          <h3>Profissão ?</h3>
+          <h3>Reflexos ?</h3>
+          <h3>Religião ?</h3>
+          <h3>Tática ?</h3>
+          <h3>Tecnologia ?</h3>
+          <h3>Vontade ?</h3>
         <div class="periciaList" id="periciaList"></div>
       </div>
 
@@ -371,13 +344,45 @@
     </div>
     </div>
 
+    <div class="container">
+      <div class="details border">
+        <h2 class="grid-title">HABILIDADES</h2>
+        <hr />
+    <div class="inputs">
+      <h4>Nome</h4>
+      <input type="text" name="name" id="name" value="" />
+      <h4>Jogador</h4>
+      <input type="text" name="player" id="player" value="" />
+      <h4>Classe</h4>
+      <input type="text" name="player" id="class" value="" />
+      <h4>Cargo</h4>
+      <input type="text" name="player" id="rank" value="" />
+      <h4>NEX</h4>
+      <input type="text" name="player" id="nex" value="" />
+      <h4>Ocupação</h4>
+      <input type="text" name="occupation" id="occupation" value="" />
+      <h4>Idade</h4>
+      <input type="text" name="age" id="age" value="" />
+      <h4>Gênero</h4>
+      <select id="sex" name="sex">
+        <option value="male">Masculino</option>
+        <option value="female">Feminino</option>
+        <option value="other">Outro</option>
+      </select>
+      <h4>Local de nascimento</h4>
+      <input type="text" name="birthplace" id="birthplace" value="" />
+      <h4>Local de residência</h4>
+      <input type="text" name="residence" id="residence" value="" />
+    </div>
+  </div>
+
+
+
+
 
     <div class="justify-center">
-      <button class="start" onclick="infoadd()">Adicionais</button>
-    </div>
-    <div class="justify-center">
-      <button class="start" onclick="antecedentes()">Antecedentes</button>
-    </div>
+    <button class="start" onclick="antecedentes()">Antecedentes</button>
+  </div>
 
     <!-- <div class="modal-overlay active">
             <div class="modal">
