@@ -100,10 +100,6 @@ data.weapons.map((weapon, index) => {
   addWeaponToTable(weapon, index)
 })
 
-data.items.map((item, index) => {
-  addWeaponToTable(item, index)
-})
-
 data.attributes.map((attribute, index) => {
   addAttribute(attribute, index)
 })
