@@ -24,8 +24,8 @@ const data = {
   },
 
   pass: {
-    current: 15,
-    max: 15,
+    current: 0,
+    max: 0,
   },
   bloq: {
     current: 22,
