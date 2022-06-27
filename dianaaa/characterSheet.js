@@ -24,16 +24,16 @@ const data = {
   },
 
   pass: {
-    current: 15,
-    max: 15,
+    current: 0,
+    max: 0,
   },
   bloq: {
-    current: 15,
-    max: 15,
+    current: 14,
+    max: 14,
   },
   esqu: {
-    current: 20,
-    max: 20,
+    current: 15,
+    max: 15,
   },
 
   weapons: [
