@@ -23,17 +23,13 @@ const data = {
     max: 12,
   },
 
-  pass: {
-    current: 99,
-    max: 99,
-  },
   bloq: {
-    current: 99,
-    max: 99,
+    current: 8,
+    max: 8,
   },
   esqu: {
-    current: 99,
-    max: 99,
+    current: 9,
+    max: 9,
   },
 
   weapons: [
@@ -127,11 +123,6 @@ $('#ocultCount').text(`${data.ocult.current}/${data.ocult.max}`)
 $('#ocultCurrent').val(data.ocult.current)
 $('#ocultMax').val(data.ocult.max)
 
-$('.passBar').css('width', `${calculateBar(data.pass.current, data.pass.max)}%`)
-$('#passCount').text(`${data.pass.current}/${data.pass.max}`)
-$('#passCurrent').val(data.pass.current)
-$('#passMax').val(data.pass.max)
-
 $('.bloqBar').css('width', `${calculateBar(data.bloq.current, data.bloq.max)}%`)
 $('#bloqCount').text(`${data.bloq.current}/${data.bloq.max}`)
 $('#bloqCurrent').val(data.bloq.current)
@@ -146,7 +137,6 @@ const lifeModal = $('#lifeModal')
 const sanityModal = $('#sanityModal')
 const ocultModal = $('#ocultModal')
 
-const passModal = $('#passModal')
 const bloqModal = $('#bloqModal')
 const esquModal = $('#esquModal')
 
@@ -163,8 +153,6 @@ $(window).click(function (event) {
   } else if (event.target.id == 'sanityModal') {
     sanityModal.css('display', 'none')
   } else if (event.target.id == 'ocultModal') {
-  } else if (event.target.id == 'passModal') {
-    passModal.css('display', 'none')
   } else if (event.target.id == 'bloqModal') {
     bloqModal.css('display', 'none')
   } else if (event.target.id == 'esquModal') {
@@ -240,11 +228,6 @@ $('.sanityBar').click(function () {
 $('.ocultBar').click(function () {
   console.log(this)
   ocultModal.css('display', 'block')
-})
-
-$('.passBar').click(function () {
-  console.log(this)
-  passModal.css('display', 'block')
 })
 
 $('.bloqBar').click(function () {
@@ -425,22 +408,7 @@ closeModal('#ocultModal')
 event.preventDefault()
 })
 
-$('#changePass').submit(function (event) {
-  let current = Number($('#passCurrent').val())
-  const max = Number($('#passMax').val())
 
-  if (current > max) {
-    alert('O nível de passiva atual não pode ser maior que o maximo!')
-    current = max
-  }
-data.pass.current = current
-data.pass.max = max
-$('.passBar').css('width', `${calculateBar(current, max)}%`)
-$('#passCount').text(`${current}/${max}`)
-
-closeModal('#passModal')
-event.preventDefault()
-})
 
 $('#changeBloq').submit(function (event) {
   let current = Number($('#bloqCurrent').val())

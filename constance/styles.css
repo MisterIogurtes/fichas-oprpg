@@ -94,6 +94,11 @@ h2.grid-title {
     text-align: center;
 }
 
+.ulcenter {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
 .border {
     border-radius: 3px;
     border: solid;
