@@ -1,5 +1,5 @@
 const data = {
-  name: 'Slyvie Aveline',
+  name: 'Sylvie Aveline',
   player: 'dianaaa',
   class: 'Ocultista',
   rank: 'Recruta',
