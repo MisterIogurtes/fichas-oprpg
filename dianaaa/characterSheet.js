@@ -1,22 +1,22 @@
 const data = {
-  name: 'Maya Lopez (Mah)',
-  player: 'beatrizz',
+  name: 'Slyvie Aveline',
+  player: 'dianaaa',
   class: 'Ocultista',
-  rank: 'Elite',
-  nex: '44%',
-  occupation: '',
+  rank: 'Recruta',
+  nex: '5%',
+  occupation: 'Universitária',
   age: 26,
   sex: 'female',
-  birthplace: 'Bilbao, Espanha',
+  birthplace: 'Bordeaux, França',
   residence: 'São Paulo, Brasil',
 
   life: {
-    current: 51,
-    max: 51,
+    current: 12,
+    max: 12,
   },
   sanity: {
-    current: 54,
-    max: 54,
+    current: 20,
+    max: 20,
   },
   ocult: {
     current: 9,
@@ -24,38 +24,25 @@ const data = {
   },
 
   pass: {
-    current: 99,
-    max: 99,
+    current: 15,
+    max: 15,
   },
   bloq: {
-    current: 99,
-    max: 99,
+    current: 15,
+    max: 15,
   },
   esqu: {
-    current: 99,
-    max: 99,
+    current: 20,
+    max: 20,
   },
 
   weapons: [
     {
-      name: 'Katana',
-      type: 'Especial (duas mãos)',
+      name: 'Adaga Ritualística',
+      type: 'Especial (leve)',
       damage: '+5',
       numCurrent: 'Adjacente',
-      numMax: '1d10+4',
-      attack: '20/+1d',
-      reach: '',
-      defect: '',
-      area: '',
-    },
-  ],
-  items: [
-    {
-      name: 'Katana',
-      type: 'Especial (duas mãos)',
-      damage: '+5',
-      numCurrent: 'Adjacente',
-      numMax: '1d10+4',
+      numMax: '1d8-1',
       attack: '20/+1d',
       reach: '',
       defect: '',
@@ -65,33 +52,29 @@ const data = {
   attributes: [
     {
       type: 'AGI.',
-      amount: +2,
+      amount: +0,
     },
     {
       type: 'INT.',
-      amount: +1,
-    },
-    {
-      type: 'VIG.',
-      amount: +1,
-    },
-    {
-      type: 'PRE.',
       amount: +2,
     },
     {
+      type: 'VIG.',
+      amount: 0,
+    },
+    {
+      type: 'PRE.',
+      amount: +3,
+    },
+    {
       type: 'FOR.',
-      amount: +1,
+      amount: -1,
     },
   ]
 }
 
 data.weapons.map((weapon, index) => {
   addWeaponToTable(weapon, index)
-})
-
-data.items.map((item, index) => {
-  addWeaponToTable(item, index)
 })
 
 data.attributes.map((attribute, index) => {
@@ -596,7 +579,9 @@ function deleteWeapon(id) {
   $(`tr#${id}`).remove()
 }
 
-
+function infoadd(){
+  window.location.href = "infoadd.html"
+}
 function antecedentes(){
   window.location.href = "antecedentes.html"
 }

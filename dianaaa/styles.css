@@ -136,6 +136,11 @@ h2.grid-title {
     flex: 1;
 }
 
+.ulcenter {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
 .combat .combatHeader {
     display: flex;
     flex-direction: row;
