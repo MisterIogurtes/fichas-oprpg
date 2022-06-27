@@ -34,27 +34,14 @@ const data = {
 
   weapons: [
     {
-      name: 'Katana',
-      type: 'Especial (duas mãos)',
+      name: 'Pistola Glock 17',
+      type: 'Pistola (CP)',
       damage: '+5',
-      numCurrent: 'Adjacente',
-      numMax: '1d10+4',
-      attack: '20/+1d',
-      reach: '',
-      defect: '',
-      area: '',
-    },
-  ],
-  items: [
-    {
-      name: 'Katana',
-      type: 'Especial (duas mãos)',
-      damage: '+5',
-      numCurrent: 'Adjacente',
-      numMax: '1d10+4',
-      attack: '20/+1d',
-      reach: '',
-      defect: '',
+      numCurrent: 'Curto',
+      numMax: '2d4',
+      attack: '19/+1d',
+      reach: 'Normal',
+      defect: 'Discreta',
       area: '',
     },
   ],
@@ -84,10 +71,6 @@ const data = {
 
 data.weapons.map((weapon, index) => {
   addWeaponToTable(weapon, index)
-})
-
-data.items.map((item, index) => {
-  addWeaponToTable(item, index)
 })
 
 data.attributes.map((attribute, index) => {
@@ -320,38 +303,6 @@ $('#addWeaponForm').submit(function (event) {
   addWeaponToTable(weapon, id)
 
   closeModal('#addWeaponModal')
-  event.preventDefault()
-})
-
-
-$('#addItemForm').submit(function (event) {
-  var itemType = ''
-
-  if ($('#itemType').val() == 'fire') {
-    itemType = 'Fogo'
-  } else if ($('#itemType').val() == 'arch') {
-    itemType = 'Arco'
-  } else if ($('#itemType').val() == 'fight') {
-    itemType = 'Briga'
-  }
-
-  const item = {
-    name: $('#itemName').val(),
-    type: itemType,
-    damage: $('#itemdamage').val(),
-    numCurrent: $('#itemNumCurrent').val(),
-    numMax: $('#itemNumMax').val(),
-    attack: $('#itemAttack').val(),
-    reach: $('#itemReach').val(),
-    defect: $('#itemDefect').val(),
-    area: $('#itemArea').val(),
-  }
-
-  data.item.push(item)
-  const id = data.item.length - 1
-  addWeaponToTable(item, id)
-
-  closeModal('#addItemModal')
   event.preventDefault()
 })
 
