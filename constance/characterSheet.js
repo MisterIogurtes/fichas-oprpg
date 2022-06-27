@@ -24,12 +24,12 @@ const data = {
   },
 
   bloq: {
-    current: 8,
-    max: 8,
+    current: 20,
+    max: 20,
   },
   esqu: {
-    current: 9,
-    max: 9,
+    current: 24,
+    max: 24,
   },
 
   weapons: [
