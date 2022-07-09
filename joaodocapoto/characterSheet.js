@@ -5,9 +5,9 @@ const data = {
   rank: 'Recruta',
   nex: '5%',
   occupation: 'Personal Trainer',
-  age: 26,
-  sex: 'female',
-  birthplace: 'Bilbao, Espanha',
+  age: 25,
+  sex: 'male',
+  birthplace: 'QUALQUER COISA NA Angola',
   residence: 'São Paulo, Brasil',
 
   life: {
