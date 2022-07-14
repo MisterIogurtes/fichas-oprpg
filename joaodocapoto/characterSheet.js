@@ -7,7 +7,7 @@ const data = {
   occupation: 'Personal Trainer',
   age: 25,
   sex: 'male',
-  birthplace: 'QUALQUER COISA NA Angola',
+  birthplace: 'Luanda, Angola',
   residence: 'São Paulo, Brasil',
 
   life: {
