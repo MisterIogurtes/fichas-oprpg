@@ -1,7 +1,7 @@
 const data = {
   name: 'Ivy Hart',
   player: 'luvconstance',
-  class: 'Ocultista',
+  class: 'Especialista',
   rank: 'Elite',
   nex: '44%',
   occupation: 'Policial',
