@@ -15,7 +15,7 @@ const data = {
     max: 22,
   },
   sanity: {
-    current: 12,
+    current: 9,
     max: 12,
   },
   ocult: {
