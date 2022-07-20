@@ -1,6 +1,6 @@
 const data = {
   name: 'Agostinho da Silva',
-  player: 'JOÃO DO CAPOTO',
+  player: 'McBrim',
   class: 'Combatente',
   rank: 'Recruta',
   nex: '5%',
