@@ -70,7 +70,19 @@ const data = {
       defect: 'Discreto',
       area: '',
     },
+    {
+      name: 'Espada Estampada',
+      type: 'Espada',
+      damage: '+5',
+      numCurrent: 'Adjacente',
+      numMax: '1d8',
+      attack: '20/+1d',
+      reach: '',
+      defect: '',
+      area: '',
+    },
   ],
+  
 
   attributes: [
     {
