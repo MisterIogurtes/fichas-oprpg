@@ -23,9 +23,17 @@ const data = {
     max: 11,
   },
 
+  pass: {
+    current: 0,
+    max: 0,
+  },
   bloq: {
-    current: 12,
-    max: 12,
+    current: 14,
+    max: 14,
+  },
+  esqu: {
+    current: 15,
+    max: 15,
   },
 
   weapons: [
