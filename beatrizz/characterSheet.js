@@ -23,7 +23,7 @@ const data = {
     max: 11,
   },
 
-  pass: {
+  bloq: {
     current: 12,
     max: 12,
   },
