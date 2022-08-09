@@ -9,6 +9,8 @@ const data = {
   sex: 'female',
   birthplace: 'Bilbao, Espanha',
   residence: 'São Paulo, Brasil',
+  
+  def:'12',
 
   life: {
     current: 41,
