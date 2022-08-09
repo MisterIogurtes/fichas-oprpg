@@ -47,6 +47,12 @@ h2.grid-title {
     margin-bottom: 10px;
 }
 
+.def{
+    color: white;
+    font-size: 130%;
+    text-align: center;
+}
+
 .container {
     display: grid;
     grid-template-areas: 
