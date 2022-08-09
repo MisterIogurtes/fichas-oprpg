@@ -10,7 +10,7 @@ const data = {
   birthplace: 'Bilbao, Espanha',
   residence: 'São Paulo, Brasil',
   
-  def:'12',
+  def: '12',
 
   life: {
     current: 41,
