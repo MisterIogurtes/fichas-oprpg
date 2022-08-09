@@ -62,6 +62,12 @@ h2.grid-title {
     width: 70%;
 }
 
+.def{
+    color: white;
+    font-size: 130%;
+    text-align: center;
+}
+
 .con {
     align-self: center;
     width: 25px;
