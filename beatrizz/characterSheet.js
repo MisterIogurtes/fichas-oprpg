@@ -42,7 +42,7 @@ const data = {
     {
       name: 'Pistola Glock 17',
       type: 'Balístico',
-      damage: '[PONTARIA]',
+      damage: 'Pontaria',
       numCurrent: 'Curto',
       numMax: '1d12',
       attack: '(18)2d12',
@@ -55,7 +55,7 @@ const data = {
     {
       name: 'Arco',
       type: 'Perfuração',
-      damage: '[PONTARIA]',
+      damage: 'Pontaria',
       numCurrent: 'Médio',
       numMax: '1d6',
       attack: '(20)3d6',
