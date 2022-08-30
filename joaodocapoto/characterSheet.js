@@ -56,7 +56,7 @@ const data = {
       numMax: '1d8',
       attack: '(19) 2d8',
       reach: '—',
-      defect: '2',
+      defect: '1',
       area: '',
     },
     {
