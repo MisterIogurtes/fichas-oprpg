@@ -55,7 +55,7 @@ const data = {
     {
       name: 'Arco',
       type: 'Perfuração',
-      damage: '[Pontaria]',
+      damage: '[PONTARIA]',
       numCurrent: 'Médio',
       numMax: '1d6',
       attack: '(20)3d6',
