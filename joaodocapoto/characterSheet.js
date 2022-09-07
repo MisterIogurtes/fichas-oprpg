@@ -19,7 +19,7 @@ const data = {
     max: 12,
   },
   ocult: {
-    current: 4,
+    current: 1,
     max: 4,
   },
 
