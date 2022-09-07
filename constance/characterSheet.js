@@ -11,7 +11,7 @@ const data = {
   residence: 'São Paulo, Brasil',
 
   life: {
-    current: 40,
+    current: 38,
     max: 40,
   },
   sanity: {
