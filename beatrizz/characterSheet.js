@@ -21,8 +21,8 @@ const data = {
     max: 60,
   },
   ocult: {
-    current: 11,
-    max: 11,
+    current: 34,
+    max: 34,
   },
 
   pass: {
