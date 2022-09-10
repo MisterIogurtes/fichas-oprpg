@@ -3,7 +3,7 @@ const data = {
   player: 'luvconstance',
   class: 'Especialista',
   rank: 'Elite',
-  nex: '44%',
+  nex: '40%',
   occupation: 'Policial',
   age: 24,
   sex: 'female',
@@ -11,16 +11,16 @@ const data = {
   residence: 'São Paulo, Brasil',
 
   life: {
-    current: 38,
-    max: 40,
+    current: 37,
+    max: 37,
   },
   sanity: {
-    current: 38,
-    max: 38,
+    current: 44,
+    max: 44,
   },
   ocult: {
-    current: 12,
-    max: 12,
+    current: 32,
+    max: 32,
   },
 
   bloq: {
