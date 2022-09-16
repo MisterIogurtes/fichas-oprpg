@@ -23,7 +23,19 @@
       <div class='card'>
         <img src="image/oprpg1.png" width="640" height="220">
         
+          <div class='label-float'>
+            <input type='password' id='senha' paceholder='' required>
+            <label id='senhaLabel' for='senha' id='senha'>?</label>
+          </div>
+        
         <div class='justify-center'>
+        </div>
+
+        <div class='justify-center'>
+        <button class="start" onclick="entrar()">Entrar</button>
+    </div>
+          
+        <!--<div class='justify-center'>
           <button class="start<br>" onclick="joaodocapoto()">Agostinho da Silva</button>
                         <br><br><br>
           <button class="start<br>" onclick="luvconstance()">Ivy Hart</button>
@@ -33,7 +45,7 @@
           <button class="start<br>" onclick="dianaaa()">Sylvie Aveline</button>
                         <br><br><br>
           <button class="start<br>" onclick="mestre()">Mestre</button>
-        </div>
+        </div>!-->
         
         <div class='justify-center'>
         </div>
@@ -69,4 +81,11 @@
   function mestre(){
     window.location.href = "mestreSenha.html"
   }
+
+    function entrar(){
+    var senha = document.getElementById("senha");
+
+    if(senha.value == "456100610795146406192081"){
+      window.location.href = "enigma.html"
+    }
 </script>
