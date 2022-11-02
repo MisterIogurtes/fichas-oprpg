@@ -24,15 +24,20 @@
         <img src="image/oprpg1.png" width="640" height="220">
         
         <div class='justify-center'>
-          <!--<button class="start<br>" onclick="joaodocapoto()">McBrim</button>
+          <!--<button class="start<br>" onclick="joaodocapoto()">Araújo das babes</button>
                         <br><br><br>
           <button class="start<br>" onclick="luvconstance()">constance.m0</button>
                         <br><br><br>
           <button class="start<br>" onclick="beatrizz()">beatrizz</button>
                         <br><br><br>
-          <button class="start<br>" onclick="dianaaa()">dianaaa</button>-->
+          <button class="start<br>" onclick="dianaaa()">dianaaa</button>
+                        <br><br><br>
+          <button class="start"<br>" onclick="rui()">rui</button>
 
-          <button class="start<br>" onclick="enigma()">?</button>
+          <button class="start<br>" onclick="enigma()">?</button>-->
+           
+            <p id="countdownEnigma"></p>
+            
         </div>
         
         <div class='justify-center'>
@@ -60,8 +65,37 @@
   function dianaaa(){
     window.location.href = "dianaaaSenha.html"
   }
+  function rui(){
+      window.location.href = "ruiSenha.html"
+  }
 
   function enigma(){
     window.location.href = "enigmaTemp2.html"
   }
+    
+    
+    // coutdown para o enigma
+    
+  var countdownDate = new Date("Nov 13, 2022 16:03:00").getTime();
+
+  var x = setInterval(function() {
+
+  var now = new Date().getTime();
+
+  var distance = countdownDate - now;
+
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("countdownEnigma").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdownEnigma").innerHTML = "?";
+  }
+}, 1000);
+    
 </script>
