@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Agostinho da Silva</title>
+  </head>
+  <body>
+    <h1 class="title">Perfil de investigador: Ordo Realitas</h1>
+
+    <!-- modal -->
+    <div id="diceAttributes" class="modal">
+      <div class="modal-content">
+        <img class="modalDice" src="./img/dado.png" alt="Dado" />
+        <h2 id="diceNumber"></h2>
+        <p id="diceType"></p>
+      </div>
+    </div>
+
+    <div id="lifeModal" class="modal with-input">
+      <div class="modal-content">
+        <h2>MODIFICAR PONTOS DE VIDA</h2>
+        <hr />
+        <form class="formModal" id="changeLife">
+          <h3>Atual</h3>
+          <input type="number" name="current" id="lifeCurrent" min="0" />
+          <h3>Máximo</h3>
+          <input type="number" name="max" id="lifeMax" min="0" />
+          <input type="submit" value="Salvar" />
+        </form>
+      </div>
+    </div>
+
+    <div id="sanityModal" class="modal with-input">
+      <div class="modal-content">
+        <h2>MODIFICAR PONTOS DE SANIDADE</h2>
+        <hr />
+        <form class="formModal" id="changeSanity">
+          <h3>Atual</h3>
+          <input
+            type="number"
+            name="sanityCurrent"
+            id="sanityCurrent"
+            min="0"
+          />
+          <h3>Máximo</h3>
+          <input type="number" name="sanityMax" id="sanityMax" min="0" />
+          <input type="submit" value="Salvar" />
+        </form>
+      </div>
+    </div>
+
+    <div id="ocultModal" class="modal with-input">
+      <div class="modal-content">
+        <h2>MODIFICAR PONTOS DE ESFORÇO</h2>
+        <hr />
+        <form class="formModal" id="changeOcult">
+          <h3>Atual</h3>
+          <input type="number" name="current" id="ocultCurrent" min="0" />
+          <h3>Máximo</h3>
+          <input type="number" name="ocultMax" id="ocultMax" min="0" />
+          <input type="submit" value="Salvar" />
+        </form>
+      </div>
+    </div>
+
+    <div id="passModal" class="modal with-input">
+      <div class="modal-content">
+        <h2>MODIFICAR NÍVEL DE PASSIVA</h2>
+        <hr />
+        <form class="formModal" id="changePass">
+          <h3>Atual</h3>
+          <input type="number" name="current" id="passCurrent" min="0" />
+          <h3>Máximo</h3>
+          <input type="number" name="passMax" id="passMax" min="0" />
+          <input type="submit" value="Salvar" />
+        </form>
+      </div>
+    </div>
+
+    <div id="bloqModal" class="modal with-input">
+      <div class="modal-content">
+        <h2>MODIFICAR NÍVEL DE BLOQUEIO</h2>
+        <hr />
+        <form class="formModal" id="changeBloq">
+          <h3>Atual</h3>
+          <input type="number" name="current" id="bloqCurrent" min="0" />
+          <h3>Máximo</h3>
+          <input type="number" name="bloqMax" id="bloqMax" min="0" />
+          <input type="submit" value="Salvar" />
+        </form>
+      </div>
+    </div>
+
+    <div id="esquModal" class="modal with-input">
+      <div class="modal-content">
+        <h2>MODIFICAR NÍVEL DE ESQUIVA</h2>
+        <hr />
+        <form class="formModal" id="changeEsqu">
+          <h3>Atual</h3>
+          <input type="number" name="current" id="esquCurrent" min="0" />
+          <h3>Máximo</h3>
+          <input type="number" name="esquMax" id="esquMax" min="0" />
+          <input type="submit" value="Salvar" />
+        </form>
+      </div>
+    </div>
+
+    <div id="addWeaponModal" class="modal with-input">
+      <div class="modal-content">
+        <h2>ADICIONAR ARMA</h2>
+        <hr />
+        <form id="addWeaponForm" action="">
+          <table class="weapons" id="newWeapon">
+            <tr>
+              <th>Arma</th>
+              <th>Tipo</th>
+              <th>Teste</th>
+              <th>Alcance</th>
+              <th>Dano</th>
+              <th>Crítico</th>
+              <th>Recarga</th>
+              <th>Especial</th>
+            </tr>
+            <tr>
+              <td>
+                <input type="text" name="weaponName" id="weaponName" />
+              </td>
+              <td>
+                <select id="weaponType" name="weaponType">
+                  <option value="fire">Fogo</option>
+                  <option value="arch">Arco</option>
+                  <option value="fight">Briga</option>
+                </select>
+              </td>
+              <td>
+                <input type="text" name="weaponDamage" id="weaponDamege" />
+              </td>
+              <td>
+                <input
+                  type="text"
+                  name="weaponNumCurrent"
+                  id="weaponNumCurrent"
+                />
+              </td>
+              <td>
+                <input type="text" name="weaponNumMax" id="weaponNumMax" />
+              </td>
+              <td>
+                <input type="text" name="weaponAttack" id="weaponAttack" />
+              </td>
+              <td>
+                <input type="text" name="weaponReach" id="weaponReach" />
+              </td>
+              <td>
+                <input type="text" name="weaponDefect" id="weaponDefect" />
+              </td>
+            </tr>
+          </table>
+          <input type="submit" value="Salvar" />
+        </form>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="details border">
+        <h2 class="grid-title">DETALHES PESSOAIS</h2>
+        <hr />
+
+        <div class="inputs">
+          <h4>Nome</h4>
+          <input type="text" name="name" id="name" value="" />
+          <h4>Jogador</h4>
+          <input type="text" name="player" id="player" value="" />
+          <h4>Classe</h4>
+          <input type="text" name="player" id="class" value="" />
+          <h4>Cargo</h4>
+          <input type="text" name="player" id="rank" value="" />
+          <h4>NEX</h4>
+          <input type="text" name="player" id="nex" value="" />
+          <h4>Ocupação</h4>
+          <input type="text" name="occupation" id="occupation" value="" />
+          <h4>Idade</h4>
+          <input type="text" name="age" id="age" value="" />
+          <h4>Gênero</h4>
+          <select id="sex" name="sex">
+            <option value="male">Masculino</option>
+            <option value="female">Feminino</option>
+            <option value="other">Outro</option>
+          </select>
+          <h4>Local de nascimento</h4>
+          <input type="text" name="birthplace" id="birthplace" value="" />
+          <h4>Local de residência</h4>
+          <input type="text" name="residence" id="residence" value="" />
+        </div>
+      </div>
+      <div class="character">
+        <div class="characterHeader">
+        </div>
+
+        <div class="bars">
+          <h1>Saúde</h1>
+          <h4>PONTOS DE VIDA</h4>
+          <div class="bar">
+            <div class="lifeBar" style="width: 0%">
+              <p class="barcount" id="lifeCount"></p>
+            </div>
+          </div>
+          <div class="checkboxs">
+            <form action="">
+              <input type="checkbox" id="lesion" name="lesion" value="lesion" />
+              <label for="lesion"> Lesão grave</label>
+              <input type="checkbox" id="injury" name="injury" value="injury" />
+              <label for="injury"> Lesionamento</label>
+              <input type="checkbox" id="dying" name="dying" value="dying" />
+              <label for="dying"> Morrendo</label>
+            </form>
+          </div>
+<br>
+          <h4>PONTOS DE SANIDADE</h4>
+          <div class="sanity">
+            <div class="contentSanityBar">
+              <div class="sanityBar" style="width: 0%">
+                <p class="barcount" id="sanityCount"></p>
+              </div>
+            </div>
+          </div>
+          <div class="checkboxs">
+            <input type="checkbox" id="traumatized" name="traumatized" value="traumatized"/>
+            <label for="traumatized"> Perturbado</label>
+            <input type="checkbox" id="crazed" name="crazed" value="crazed" />
+            <label for="crazed"> Enlouquecido</label>
+            <input type="checkbox" id="insane" name="insane" value="insane" />
+            <label for="insane"> Insano</label>
+          </div>
+        </div>
+        <br>
+        <h4>PONTOS DE ESFORÇO</h4>
+        <div class="ocult">
+          <div class="contentOcultBar">
+            <div class="ocultBar" style="width: 0%">
+              <p class="barcount" id="ocultCount"></p>
+        </div>
+        </div>
+<br><br>
+        <h1>Defesa</h1>
+	<div class='justify-center'>
+  	<p class="def"> 12</p>
+  </div>
+  </div>
+</div>
+
+
+
+
+      <div class="attributes border">
+        <h2 class="grid-title">ATRIBUTOS</h2>
+        <hr />
+
+        <div class="attributesList" id="attributesList"></div>
+      </div>
+
+      <div class="pericia border">
+        <h2 class="grid-title">PERICIAS</h2>
+        <hr />
+        <ul class="ulcenter">
+          <li>Acrobacia <br> 0 </li>
+	        <br>
+          <li>Adestramento <br> 0 </li>
+	        <br>
+          <li>Artes <br> 0 </li>
+	        <br>
+          <li>Atletismo <br> +5 </li>
+          <br>
+          <li>Atualidades <br> 0 </li>
+          <br>
+          <li>Ciência <br> 0 </li>
+          <br>
+          <li>Diplomacia <br> 0 </li>
+          <br>
+          <li>Enganação <br> 0 </li>
+          <br>
+          <li>Fortitude <br> +5 </li>
+          <br>
+          <li>Furtividade <br> 0 </li>
+          <br>
+          <li>Iniciativa <br> 0 </li>
+          <br>
+          <li>Intimidação <br> +5 </li>
+          <br>
+          <li>Intuição <br> 0 </li>
+          <br>
+          <li>Investigação <br> 0 </li>
+          <br>
+          <li>Luta <br> +5 </li>
+          <br>
+          <li>Medicina <br> 0 </li>
+          <br>
+          <li>Ocultismo <br> 0 </li>
+          <br>
+          <li>Percepção <br> 0 </li>
+          <br>
+          <li>Pilotagem <br> 0 </li>
+          <br>
+          <li>Pontaria <br> 0 </li>
+          <br>
+          <li>Prestidigitação <br> 0 </li>
+          <br>
+          <li>Profissão <br> 0 </li>
+          <br>
+          <li>Reflexos <br> 0 </li>
+          <br>
+          <li>Religião <br> 0 </li>
+          <br>
+          <li>Tática <br> 0 </li>
+          <br>
+          <li>Tecnologia <br> 0 </li>
+          <br>
+          <li>Vontade <br> +5 </li>
+        </ul>
+
+        <div class="periciaList" id="periciaList"></div>
+      </div>
+
+      <div class="combat border">
+        <div class="combatHeader">
+          <h2 class="grid-title">COMBATE</h2>
+          <button id="addWeapon">&plus;</button>
+        </div>
+        <hr />
+
+        <table class="weapons" id="weapons">
+          <tr>
+            <th>Arma</th>
+            <th>Tipo</th>
+            <th>Teste</th>
+            <th>Alcance</th>
+            <th>Dano</th>
+            <th>Crítico</th>
+            <th>Recarga</th>
+            <th>Categoria</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+    </div>
+
+
+    <div class="justify-center">
+      <button class="start" onclick="infoadd()">Adicionais</button>
+    </div>
+    <div class="justify-center">
+      <button class="start" onclick="antecedentes()">Antecedentes</button>
+    </div>
+
+    <!-- <div class="modal-overlay active">
+            <div class="modal">
+                <h2>MODIFICAR VIDA</h2>
+                <hr>
+                <form id="changeLife">
+                    <span class="modalspan">Atual</span>
+                    <input class="modalinput" type="number" name="current" id="lifeCurrent" min="0">
+
+                    <span class="modalspan">Máximo</span>
+                    <input class="modalinput" type="number" name="max" id="lifeMax" min="0">
+                    <input class="modalbutton" type="submit" value="Salvar">
+                </form>
+            </div>
+        </div> -->
+
+    <script src="characterSheet.js"></script>
+  </body>
+</html>
