@@ -2,6 +2,65 @@
     box-sizing: border-box;
 }
 
+
+
+
+.neonText1 {
+  color: #fff;
+  text-shadow:
+      0 0 7px #FF3CBB,
+      0 0 10px #FF3CBB,
+      0 0 21px #FF3CBB,
+      0 0 42px #FF3CBB,
+      0 0 82px #FF3CBB,
+      0 0 92px #FF3CBB,
+      0 0 102px #FF3CBB,
+      0 0 151px #FF3CBB;
+}
+
+.neonText2 {
+  color: #fff;
+  text-shadow:
+      0 0 7px #BA16F3,
+      0 0 10px #BA16F3,
+      0 0 21px #BA16F3,
+      0 0 42px #BA16F3,
+      0 0 82px #BA16F3,
+      0 0 92px #BA16F3,
+      0 0 102px #BA16F3,
+      0 0 151px #BA16F3;
+}
+
+.neonText3 {
+  color: #fff;
+  text-shadow:
+      0 0 7px #F3F016,
+      0 0 10px #F3F016,
+      0 0 21px #F3F016,
+      0 0 42px #F3F016,
+      0 0 82px #F3F016,
+      0 0 92px #F3F016,
+      0 0 102px #F3F016,
+      0 0 151px #F3F016;
+}
+
+.neonText4 {
+  color: #fff;
+  text-shadow:
+      0 0 7px #16F3A3,
+      0 0 10px #16F3A3,
+      0 0 21px #16F3A3,
+      0 0 42px #16F3A3,
+      0 0 82px #16F3A3,
+      0 0 92px #16F3A3,
+      0 0 102px #16F3A3,
+      0 0 151px #16F3A3;
+}
+
+
+
+
+
 body {
     background-color: black;
     font-family: 'Space Mono', monospace;
@@ -20,7 +79,6 @@ body {
   padding: 30px;
   border-radius: 4%;
   box-shadow: 3px 3px 1px 0px #00000060;
-  border: 2px solid goldenrod;
 }
 
 h1{

@@ -20,29 +20,204 @@
     
     <div class='container'>
       <div class='card'>
-        <h2>1. A entidade do sentimento;</h2>
-        <h2>2. A entidade da espiral do tempo;</h2>
-        <h2>3. A entidade da consciência;</h2>
-        <h2>4. A entidade do caos.</h2>
-
-        <div class='label-float'>
+          <div class='label-float'>
             <input type='password' id='senha' paceholder='' required>
-            <label id='senhaLabel' for='senha' id='senha'>ogidóC</label>
+            <label id='senhaLabel' for='senha' id='senha'>i n s i r a  o  c o d i g o</label>
           </div>
         
         <div class='justify-center'>
         </div>
 
         <div class='justify-center'>
-        <button class="start" onclick="entrar()">rartnE</button> <button class="start" onclick="voltar()">ratloV</button>
+        <button class="start" onclick="entrar()">e n t r a r</button> <button class="start" onclick="voltar()">v o l t a r</button>
     </div>
-        <p>amic rop oãdirucse an átse atsopser a
+        <p>
         </p>
       </div>
       </div>
 </body>
 </html>
 
+
+
+<style>
+@font-face {
+  src: url(enigma/outros/AFonteParanormal-Regular.ttf);
+  font-family: paranormalfont;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: 'Space Mono', monospace;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 100px;
+  font-family: paranormalfont;
+}
+
+.card {
+  background-color: black;
+  padding: 30px;
+  border-radius: 4%;
+  box-shadow: 3px 3px 1px 0px #00000060;
+  border: 2px solid goldenrod;
+  font-family: paranormalfont;
+}
+
+h1{
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+  font-family: paranormalfont;
+}
+
+input{
+    color: white;
+    font-family: paranormalfont;
+  }
+
+.label-float input{
+  width: 100%;
+  padding: 5px 5px;
+  display: inline-block;
+  border: 0;
+  border-bottom: 2px solid white;
+  background-color: transparent;
+  outline: none;
+  min-width: 180px;
+  font-size: 16px;
+  transition: all .3s ease-out;
+  border-radius: 0;
+  font-family: paranormalfont;
+  
+}
+
+.label-float{
+  position: relative;
+  padding-top: 13px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  color: white;
+  font-family: paranormalfont;
+}
+
+.label-float input:focus{
+  border-bottom: 2px solid white;
+  font-family: paranormalfont;
+}
+
+.label-float label{
+  color: white;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 13px;
+  transition: all .3s ease-out;
+  font-family: paranormalfont;
+}
+
+.label-float input:focus + label,
+.label-float input:valid + label{
+  font-size: 13px;
+  margin-top: 0;
+  color: white;
+  font-family: paranormalfont;
+}
+
+button{
+  background-color: transparent;
+  border-color: white;
+  color: white;
+  padding: 7px;
+  font-weight: bold;
+  font-size: 12pt;
+  margin-top: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  transition: all .4s ease-out;
+  font-family: paranormalfont;
+}
+
+button:hover{
+  background-color: white;
+  color: #fff;
+  font-family: paranormalfont;
+}
+
+.justify-center{
+  display: flex;
+  justify-content: center;
+  font-family: paranormalfont;
+}
+
+hr{
+  margin-top: 10%;
+  margin-bottom: 10%;
+  width: 60%;
+  font-family: paranormalfont;
+}
+
+p{
+  color: white;
+  font-size: 14pt;
+  text-align: center;
+  font-family: paranormalfont;
+}
+
+a{
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all .3s ease-out;
+  font-family: paranormalfont;
+}
+
+a:hover{
+  color: white;
+  font-family: paranormalfont;
+}
+
+ #msgError{
+  text-align: center;
+  color: #ff0000;
+  background-color: #ffbbbb;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
+  font-family: paranormalfont;
+}
+.start {
+    background-color: black; 
+    border: 2px solid white;
+    color: white;
+    padding: 10px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Special Elite', cursive;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: paranormalfont;
+}
+
+.start:hover {
+    background-color: white;
+    color: black;
+    font-family: paranormalfont;
+}
+</style>
 
 
 
@@ -52,9 +227,9 @@
     var senha = document.getElementById("senha");
 
     if(senha.value == "456100610795146406192081"){
-      window.location.href = "enigma/explicação.html"
+      window.location.href = "enigma/e.html"
     }else{
-      window.location.href = "erroE.html"
+      window.location.href = "index.html"
     }
   }
 
