@@ -1,26 +1,26 @@
 const data = {
-  name: 'Ivy Hart',
-  player: 'constance.m0',
-  class: 'Especialista',
-  rank: 'Elite',
-  nex: '40%',
-  occupation: 'Policial',
-  age: 24,
-  sex: 'female',
-  birthplace: 'Londres, Inglaterra',
+  name: 'Adam Joseph',
+  player: 'Hyper.6',
+  class: 'Ocultista',
+  rank: 'Operador',
+  nex: '15%',
+  occupation: 'Criador de Armas',
+  age: 33,
+  sex: 'male',
+  birthplace: 'Frankfurt, Alemanha',
   residence: 'São Paulo, Brasil',
 
   life: {
-    current: 37,
-    max: 37,
+    current: 22,
+    max: 22,
   },
   sanity: {
-    current: 44,
-    max: 44,
+    current: 30,
+    max: 30,
   },
   ocult: {
-    current: 32,
-    max: 32,
+    current: 15,
+    max: 15,
   },
 
   bloq: {
@@ -52,11 +52,11 @@ const data = {
     },
     {
       type: 'INT.',
-      amount: +2,
+      amount: +3,
     },
     {
       type: 'VIG.',
-      amount: +0,
+      amount: +2,
     },
     {
       type: 'PRE.',
@@ -64,7 +64,7 @@ const data = {
     },
     {
       type: 'FOR.',
-      amount: +2,
+      amount: +1,
     },
   ]
 }
