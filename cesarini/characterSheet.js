@@ -11,16 +11,16 @@ const data = {
   residence: 'São Paulo, Brasil',
 
   life: {
-    current: 22,
-    max: 22,
+    current: 28,
+    max: 28,
   },
   sanity: {
-    current: 12,
-    max: 12,
+    current: 15,
+    max: 15,
   },
   ocult: {
-    current: 4,
-    max: 4,
+    current: 7,
+    max: 7,
   },
 
   pass: {
