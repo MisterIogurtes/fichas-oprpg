@@ -87,11 +87,11 @@ const data = {
   attributes: [
     {
       type: 'AGI.',
-      amount: 0,
+      amount: 1,
     },
     {
       type: 'INT.',
-      amount: -1,
+      amount: 0,
     },
     {
       type: 'VIG.',
