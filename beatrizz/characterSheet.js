@@ -5,7 +5,7 @@ const data = {
   rank: 'Elite',
   nex: '45%',
   occupation: '',
-  age: 26,
+  age: '26 (28/02)',
   sex: 'female',
   birthplace: 'Bilbao, Espanha',
   residence: 'São Paulo, Brasil',
@@ -13,16 +13,16 @@ const data = {
   def: '12',
 
   life: {
-    current: 41,
-    max: 41,
+    current: 37,
+    max: 37,
   },
   sanity: {
     current: 60,
     max: 60,
   },
   ocult: {
-    current: 34,
-    max: 34,
+    current: 54,
+    max: 54,
   },
 
   pass: {
