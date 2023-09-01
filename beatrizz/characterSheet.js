@@ -83,7 +83,7 @@ const data = {
     },
     {
       type: 'FOR.',
-      amount: +1,
+      amount: +2,
     },
   ]
 }
