@@ -71,7 +71,7 @@ const data = {
     },
     {
       type: 'INT.',
-      amount: +1,
+      amount: +2,
     },
     {
       type: 'VIG.',
