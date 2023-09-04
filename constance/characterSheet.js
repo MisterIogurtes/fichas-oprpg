@@ -85,7 +85,7 @@ const data = {
     },
     {
       type: 'INT.',
-      amount: +2,
+      amount: +3,
     },
     {
       type: 'VIG.',
@@ -93,7 +93,7 @@ const data = {
     },
     {
       type: 'PRE.',
-      amount: +1,
+      amount: +2,
     },
     {
       type: 'FOR.',
